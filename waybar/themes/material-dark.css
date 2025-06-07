@@ -1,0 +1,18 @@
+@define-color fg rgba(255, 255, 255, 1);
+@define-color fg_alt rgba(255, 255, 255, 1);
+@define-color fg_soft rgba(255, 255, 255, 0.6);
+
+@define-color bg rgba(0, 8, 28, 0.9);
+@define-color bg_alt transparent;
+@define-color bg_soft rgba(14, 25, 51, 0.6);
+
+@define-color tooltip_bg rgb(0, 8, 28);
+@define-color hover rgba(255, 255, 255, 0.1);
+
+@define-color workspace_inactive rgba(255, 255, 255, 0.4);
+@define-color workspace_active rgba(0, 8, 28, 0.4);
+@define-color workspace_hover rgba(255, 255, 255, 0.1);
+
+@define-color urgent rgba(0, 153, 255, 1);
+@define-color active rgba(88, 157, 246, 1);
+@define-color good rgba(64, 239, 169, 1);

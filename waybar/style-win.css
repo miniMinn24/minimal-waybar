@@ -1,0 +1,242 @@
+/*
+██╗    ██╗ █████╗ ██╗   ██╗██████╗  █████╗ ██████╗ 
+██║    ██║██╔══██╗╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
+██║ █╗ ██║███████║ ╚████╔╝ ██████╔╝███████║██████╔╝
+██║███╗██║██╔══██║  ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗
+╚███╔███╔╝██║  ██║   ██║   ██████╔╝██║  ██║██║  ██║
+ ╚══╝╚══╝ ╚═╝  ╚═╝   ╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
+                          Style inspired by Windows
+*/
+
+@import "themes/main.css";
+
+
+* {
+  font-family: Metropolis Medium, 'JetBrainsMono Nerd Font Propo';
+  font-size: 11px;
+  font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
+  min-height: 20px;
+  padding: 0px 5px 0px 5px;
+}
+
+window#waybar {
+  background-color: @bg;
+}
+
+tooltip * {
+  background-color: @tooltip_bg;
+  padding: 2px 3px 2px 3px;
+  border-radius: 6px;
+  color: @fg;
+}
+  
+#custom-logo {
+  background-color: @bg_alt;
+  font-size: 4px;
+  color: @fg;
+  padding: 0px 18px 0px 18px;
+  margin: 0px 8px 0px 0px;
+  background-image: url('./icons/Win11.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 28px 28px;
+}
+
+#custom-logo:hover {
+  background-color: @hover;
+  font-size: 4px;
+  background-image: url('./icons/Win11.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 28px 28px;
+}
+
+#custom-pacman.updated {
+  font-weight: bold;
+  color: @good;
+}
+  
+#window {
+  background-color: transparent;
+  color: @fg;
+}
+
+window#waybar.empty #window {
+  background-color: transparent;
+  padding: 0px 0px 0px 0px;
+}
+
+#taskbar button {
+  border-radius: 0px;
+  border-bottom: 3px solid transparent;
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  color: @fg;
+}
+
+#taskbar button.active {
+  border-bottom: 3px solid @active;
+  background: @workspace_active;
+}
+
+#taskbar button.active:hover {
+  border-bottom: 3px solid @active;
+  background: @workspace_active_hover;
+}
+
+#taskbar button:hover {
+  border-bottom: 3px solid transparent;
+  background: @workspace_active_hover;
+  color: @fg;
+}
+
+#custom-expand {
+  color: @fg;
+}
+
+#custom-search {
+  border-radius: 8px;
+  background-color: @bg_soft;
+  color: @fg;
+  padding: 0px 10px 0px 10px;
+  margin: 5px 4px 5px 4px;
+}
+
+#custom-search:hover {
+  background-color: @hover;
+
+}
+
+#custom-weather {
+  font-weight: bold;
+  background-color: transparent;
+  color: @fg_soft;
+  padding: 0px 8px 0px 8px;
+  margin: 0px 2px 0px 2px;
+}
+
+#workspaces button {
+  background: transparent;
+  border-radius: 0px;
+  border-color: transparent;
+  color: @workspace_inactive;
+  padding: 0px;
+  margin: 0px;
+}
+
+#workspaces button.active {
+  font-weight: bold;
+  background: transparent;
+  border-radius: 0px; 
+  color: @fg_alt;
+  padding: 0px;
+  margin: 0px;
+}
+
+#workspaces button.focused {
+  background-color: @workspaceactive;
+}
+
+#workspaces button.urgent {
+  color: @urgent;
+}
+
+#cpu {
+  background-color: transparent;
+  color: @fg;
+  padding: 0px 8px 0px 0px;
+  margin: 0px 0px 0px 2px;
+}
+
+#memory {
+  background-color: transparent;
+  color: @fg;
+  padding: 0px 5px 0px 5px;
+  margin: 0px 0px 0px 0px;
+}
+  
+#disk {
+  background-color: transparent;
+  color: @fg;
+  padding: 0px 5px 0px 0px;
+  margin: 0px 0px 0px 0px;
+}
+  
+#temperature {
+  background-color: transparent;
+  color: @fg;
+  padding: 0px 5px 0px 0px;
+}
+  
+#battery {
+  background-color: @bg_alt;
+  color: @fg;
+  padding: 0px 5px 0px 5px;
+  margin: 0px 0px 0px 4px;
+}
+  
+#tray {
+  background-color: transparent;
+  color: @fg;
+  padding: 0px 2px 0px 2px;
+}
+
+#language {
+  background-color: transparent;
+  color: @fg;
+  padding: 0px 5px 0px 5px;
+  margin: 0px 6px 0px 0px;
+}
+
+#backlight {
+  border-radius: 0px 0px 0px 10px;
+  background-color: @bg_alt;
+  color: @fg; 
+  padding: 0px 5px 0px 10px;
+  margin: 0px 0px 0px 4px;
+}
+
+#pulseaudio {
+  background-color: @bg_alt;
+  color: @fg; 
+  padding: 0px 5px 0px 5px;
+  margin: 0px 0px 0px 0px;
+}
+  
+#network {
+  border-color: @active;
+  border-radius: 0px 0px 0px 10px;
+  background-color: @bg_alt;
+  color: @fg;
+  padding: 0px 5px 0px 10px;
+  margin: 0px 0px 0px 4px;
+}  
+  
+#clock {
+  background-color: transparent;
+  color: @fg;
+  padding: 0px 8px 0px 8px;
+  margin: 0px 0px 0px 5px;
+}
+
+#workspaces button:hover {
+  background: @workspace_hover;
+}
+
+#custom-display:hover,
+#clock:hover,
+#backlight:hover,
+#pulseaudio:hover,
+#network:hover,
+#battery:hover,
+#custom-expand:hover,
+#custom-pacman:hover,
+#language:hover {
+  background: @hover;
+}
+
+#custom-weather:hover {
+  color: @fg;
+}

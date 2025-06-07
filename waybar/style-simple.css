@@ -1,0 +1,168 @@
+/*
+██╗    ██╗ █████╗ ██╗   ██╗██████╗  █████╗ ██████╗ 
+██║    ██║██╔══██╗╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
+██║ █╗ ██║███████║ ╚████╔╝ ██████╔╝███████║██████╔╝
+██║███╗██║██╔══██║  ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗
+╚███╔███╔╝██║  ██║   ██║   ██████╔╝██║  ██║██║  ██║
+ ╚══╝╚══╝ ╚═╝  ╚═╝   ╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
+                          A style for simple waybar
+*/
+
+@import "themes/main.css";
+
+* {
+  font-family: Metropolis Medium, "JetBrainsMono Nerd Font Propo";
+  font-size: 11px;
+  font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
+  min-height: 24px;
+  padding: 0px 5px 0px 5px;
+}
+
+window#waybar {
+  background-color: @bg;
+}
+
+window#waybar.empty #window {
+  background-color: transparent;
+}
+
+#window {
+  background-color: transparent;
+  color: @fg_soft;
+  margin: 0px 2px 0px 2px;
+}
+
+tooltip * {
+  background-color: @tooltip_bg;
+  padding: 2px 3px 2px 3px;
+  border-radius: 6px;
+  color: @fg;
+}
+
+#workspaces button {
+  background: transparent;
+  border-radius: 0px;
+  color: @workspace_inactive;
+  padding: 0px;
+  margin: 0px;
+}
+
+#workspaces button.active {
+  background: transparent;
+  border-radius: 0px;
+  color: @fg_alt;
+  padding: 0px;
+  margin: 0px;
+}
+
+#workspaces button.focused {
+  background-color: @workspace_active;
+}
+
+#workspaces button.urgent {
+  color: @urgent;
+}
+
+#custom-logo {
+  background-color: @bg_alt;
+  font-family: "JetBrainsMono Nerd Font Propo";
+  font-size: 12px;
+  color: @fg;
+  padding: 0px 10px 0px 10px;
+}
+
+#custom-expand {
+  background-color: @bg_alt;
+  color: @fg;
+  padding: 0px 4px 0px 4px;
+}
+
+#cpu {
+  border-radius: 20px;
+  background-color: transparent;
+  color: @fg;
+  padding: 0px 8px 0px 0px;
+  margin: 0px 0px 0px 2px;
+}
+
+#memory {
+  background-color: transparent;
+  color: @fg;
+  padding: 0px 5px 0px 5px;
+}
+
+#disk {
+  background-color: transparent;
+  color: @fg;
+  padding: 0px 5px 0px 0px;
+}
+
+#temperature {
+  background-color: transparent;
+  color: @fg;
+  padding: 0px 5px 0px 0px;
+}
+
+#battery {
+  background-color: @bg_alt;
+  color: @fg;
+  padding: 0px 0px 0px 5px;
+  margin: 0px 0px 0px 4px;
+}
+
+#battery.charging {
+  background-color: @bg_alt;
+  color: @fg;
+  padding: 0px 10px 0px 5px;
+}
+
+#battery.plugged {
+  background-color: @bg_alt;
+  color: @fg;
+  padding: 0px 10px 0px 5px;
+}
+
+#language {
+  background-color: transparent;
+  color: @fg;
+  padding: 0px 5px 0px 5px;
+  margin: 0px 6px 0px 0px;
+}
+
+#backlight {
+  border-radius: 0px 0px 0px 10px;
+  background-color: @bg_alt;
+  color: @fg;
+  padding: 0px 5px 0px 10px;
+  margin: 0px 0px 0px 4px;
+}
+
+#pulseaudio {
+  background-color: @bg_alt;
+  color: @fg;
+  padding: 0px 5px 0px 5px;
+}
+
+#clock {
+  background-color: transparent;
+  color: @fg;
+  padding: 0px 8px 0px 8px;
+  margin: 0px 0px 0px 5px;
+}
+
+#workspaces button:hover {
+  background: @workspace_hover;
+}
+
+#custom-logo:hover,
+#clock:hover,
+#custom-expand:hover,
+#language:hover {
+  background: @hover;
+}
+
+#backlight:hover,
+#pulseaudio:hover,
+#network:hover {
+  color: @fg_soft;
+}

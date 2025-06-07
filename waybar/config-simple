@@ -1,0 +1,164 @@
+//
+// ██╗    ██╗ █████╗ ██╗   ██╗██████╗  █████╗ ██████╗ 
+// ██║    ██║██╔══██╗╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
+// ██║ █╗ ██║███████║ ╚████╔╝ ██████╔╝███████║██████╔╝
+// ██║███╗██║██╔══██║  ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗
+// ╚███╔███╔╝██║  ██║   ██║   ██████╔╝██║  ██║██║  ██║
+//  ╚══╝╚══╝ ╚═╝  ╚═╝   ╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
+//                          A config for simple waybar
+
+{
+  "layer": "top",
+  "position": "top",
+  "modules-left": ["custom/logo", "hyprland/window"],
+  "modules-center": ["hyprland/workspaces"],
+  "modules-right": ["group/expand", "hyprland/language", "tray", "pulseaudio#mic", "pulseaudio#source", "battery", "clock"],
+
+
+    "hyprland/window": {
+      "format": "<b>{class}</b>  {title}",
+      "icon": false,
+      "max-length": 40,
+      "separate-outputs": true,
+      "tooltip": false
+    },
+
+    "hyprland/language": {
+      "format": "{}",
+      "format-en": "en",
+      "format-my": "mm",
+      "on-click": "hyprctl switchxkblayout at-translated-set-2-keyboard next",
+      "tooltip": false,
+    },
+
+    "hyprland/workspaces": {
+      "format": "{icon}",
+      "tooltip": false,
+      "all-outputs": true,
+      "sort-by-number": true,
+      "disable-scroll": false,
+      "on-scroll-up": "hyprctl dispatch workspace +1",
+      "on-scroll-down": "hyprctl dispatch workspace -1",
+      "active-only": false
+    },
+
+
+    "custom/logo": {
+      "format": "",
+      "tooltip": true,
+      "tooltip-format": "Power Options",
+      "on-click": "wlogout"
+    },
+
+    "clock": {
+      "tooltip": true,
+      "tooltip-format": "Notification Center",
+      "format": "{:%a %b %d  %I:%M %p}",
+      "on-click": "swaync-client -t -w",
+      "return-type": "json",
+      "exec-if": "which swaync-client",
+      "exec": "swaync-client -swb",
+      "escape": true
+    },
+ 
+    "tray": {
+      "format": "{icon}",
+      "tooltip": true,
+      "icon-size": 12,
+      "spacing": 0
+    },
+
+    "backlight": {
+      "device": "intel_backlight",
+      "format": "{icon}",
+      "format-icons": ["󰖨"],
+      "scroll-step": 5,
+      "tooltip": true,
+      "tooltip-format": "Brightness: {percent}%",
+    },
+
+    "pulseaudio#source": {
+      "format": "{icon}",
+      "format-muted": "󰝟",
+      "tooltip": true,
+      "tooltip-format": "Volume: {volume}%",
+      "format-icons": {
+        "headphone": "",
+        "default": ["", "", ""],
+      },
+      "scroll-step": 5,
+      "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
+    },
+
+    "pulseaudio#mic": {
+      "format": "{format_source}",
+      "format-source-muted": "",
+      "format-source": "<span foreground='red'><sup></sup></span>",
+      "on-click": "pactl set-source-mute 0 toggle",
+      "tooltip": true,
+      "tooltip-format": "Microphone Status"
+    },
+
+    "battery": {
+      "bat": "BAT0",
+      "format": "<span font_size='small'>{capacity}% {icon}</span>",
+      "format-charging": "󱐋",
+      "format-plugged": "󱐋",
+      "format-icons": {
+        "default": ["<span color='red'></span>", "<span color='orange'></span>", "", "", ""],
+      },
+      "format-full": "󰂄",
+      "tooltip": true,
+      "tooltip-format": "Battery: {capacity}%\n{time}",
+      "interval": 4
+    },
+
+   "group/expand": {
+      "orientation": "horizontal",
+      "drawer": {
+        "transition-duration": 600,
+        "transition-to-left": true,
+        "click-to-reveal": true
+      },
+      "modules": ["custom/expand", "memory", "temperature", "disk", "cpu"],
+    },
+
+    "custom/expand": {
+      "format": "",
+      "tooltip": false
+    },
+
+    "cpu": {
+	    "interval": 4,
+	    "format": "{icon0}{icon1}{icon2}{icon3}",
+	    "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "<span color='#589df6'>▇</span>", "<span color='orange'>█</span>"],
+    },
+
+    "memory": {
+      "format": "{used:0.1f}G",
+      "tooltip": true,
+      "tooltip-format": "RAM: Used {used:0.1f}G / Free {total:0.1f}G",
+      "interval": 4,
+    },
+
+    "disk": {
+      "interval": 30,
+      "unit": "GB",
+      "format": "{specific_used:0.2f}G",
+      "path": "/",
+      "tooltip": true,
+      "tooltip-format": "Root: Used {specific_used:0.2f}G / free {specific_free:0.2f}G",
+    },
+
+    "temperature": {
+      // "thermal-zone": 2,
+      // "hwmon-path": ["/sys/class/hwmon/hwmon2/temp1_input", "/sys/class/thermal/thermal_zone0/temp"],
+      "critical-threshold": 80,
+      "format-critical": "<span color='orange'>{temperatureC}~C</span>",
+      "format": "<span color='#589df6'>{temperatureC}~C</span>",
+      "tooltip": true,
+      "tooltip-format": "Temperature: {temperatureC}°C",
+      "interval": 4,
+    }
+
+} 
