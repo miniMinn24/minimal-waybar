@@ -1,6 +1,6 @@
 <div align='center'>
-<h1>【 Waybar Config -Minimalist Dotfiles 】</h1>
-These are my dotfiles for users who want to have minimalist Waybar looks, which you can also instantly install on fresh Hyprland.
+    <h1>【 Waybar Config -Minimalist Dotfiles 】</h1>
+    My dotfiles for users who want to have <b>Minimalist Waybar</b> configurations ;) <br>
 <br>
 
 [![Hyprland](https://img.shields.io/badge/Hyprland-abd6fd?style=for-the-badge "Hyprland - A dynamic tiling Wayland compositor based on wlroots that doesn't sacrifice on its looks")](https://hyprland.org/)
@@ -103,7 +103,7 @@ Then, reload your Waybar to apply changes.
 I'm just a Arch linux user who loves to customize **Hyprland** for my own environment. After getting along with it, I wanted to share my own dotfiles for anyone who wants to start Hyprland simple. <br>
 
 I'll be looking forward to update this Waybar dofiles for like new `themes` and `looks`, just when I have finished cleaning the code xD <br>
-I'll also try to share my other Hyprland dofiles like `Hyprland setup`, ... (or maybe? . _.') <br>
+I'll also try to share my other Hyprland dofiles like `Hyprland setup`, ... (maybe?) <br>
 
 <div align="center">
   
