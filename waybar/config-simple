@@ -13,6 +13,7 @@
   "modules-left": ["custom/logo", "hyprland/window"],
   "modules-center": ["hyprland/workspaces"],
   "modules-right": ["group/expand", "hyprland/language", "tray", "pulseaudio#mic", "pulseaudio#source", "battery", "clock"],
+  "reload_style_on_change": true,
 
 
     "hyprland/window": {
