@@ -19,6 +19,7 @@
   "modules-left": ["custom/weather", "hyprland/workspaces"],
   "modules-center": ["custom/logo", "custom/search", "wlr/taskbar"],
   "modules-right": ["custom/pacman", "group/expand", "hyprland/language", "tray", "pulseaudio#2", "pulseaudio", "battery", "clock"],
+  "reload_style_on_change": true,
 
 
   "hyprland/window": {
