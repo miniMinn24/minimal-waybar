@@ -70,6 +70,19 @@ git clone https://github.com/miniMinn24/minimal-waybar
 cd minimal-waybar
 cp -r waybar ~/.config/
 ```
+*And, this is how after the Waybar file structure will be looked like:*
+```bash
+~/.config/
+    └── waybar/
+        ├── icons/
+        ├── scripts/
+        ├── themes/
+        ├── config-simple
+        ├── config-win
+        ├── style-simple.css
+        └── style-win.css
+```
+
 <br>
 
 2. Start as a background process. e.g., in your `hyprland.conf`. <br>
@@ -91,7 +104,7 @@ In `~/.config/waybar/themes/main.css`, you can switch the theme to your liking (
 @import "material-dark.css"; 
 ```
 
-Then, reload your Waybar to apply changes.
+Then, saved your changes to apply it.
 
 ---
 
