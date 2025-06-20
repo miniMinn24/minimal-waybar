@@ -5,7 +5,7 @@
 
 [![Hyprland](https://img.shields.io/badge/Hyprland-abd6fd?style=for-the-badge "Hyprland - A dynamic tiling Wayland compositor based on wlroots that doesn't sacrifice on its looks")](https://hyprland.org/)
 [![Waybar](https://img.shields.io/badge/Waybar-cdd6f4?style=for-the-badge "Waybar - Highly customizable Wayland bar for Sway and Wlroots based compositors")](https://github.com/Alexays/Waybar)
-![](https://img.shields.io/github/last-commit/miniMinn24/minimal-waybar?&style=for-the-badge&color=429ddb&logoColor=D9E0EE&labelColor=141a29) ![](https://img.shields.io/github/repo-size/miniMinn24/minimal-waybar?&style=for-the-badge&color=4b6be3&logoColor=D9E0EE&labelColor=141a29)
+![](https://img.shields.io/github/last-commit/miniMinn24/minimal-waybar?&style=for-the-badge&color=429ddb&logoColor=D9E0EE&labelColor=141a29)
 
 </div>
 
